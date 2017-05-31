@@ -5,3 +5,8 @@ set :database, 'sqlite3:app.sqlite3'
 set :sessions, true
 
 require './Models'
+
+
+get '/' do
+  erb :index
+end
