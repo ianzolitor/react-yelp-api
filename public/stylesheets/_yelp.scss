@@ -1,49 +1,82 @@
 .yelpContainer {
-    width: 40%;
+    // width: 40%;
     border-radius: 10%;
     border: 4px solid salmon;
     height:auto;
-    margin: 20px;
-    background-color: teal;
-    // display: flex;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 40px;
+    background-color: black;
+    // display: flex
+    max-height: 50%;
+    text-align: center;
+
 }
 
 .yelp_image {
     background-size: 100% 100%;
     float: left;
+    border-radius: 10%;
+    padding: 10px;
 }
 
 .yelp_name {
-    color: white;
+    color: black;
     float: right;
+    background-color: #E36810;
+    border-radius: 10%;
+    text-transform: uppercase;
+    text-transform: full-width;
 
 }
 
 .yelp_phone{
     color: salmon;
     float: right;
+    color:beige;
+    display: inline-block;
 }
 
 .yelp_address {
     color: salmon;
     float: right;
+    color:beige;
+    display: inline-block;
 }
 
 .yelp_location{
     color: salmon;
     float: right;
+    color:beige;
+    display: inline-block;
 }
 
 .yelp_stars {
     color: salmon;
     float: right;
+    color:beige;
+    display: inline-block;
+    width: 50%;
 }
 
 .yelp_button {
     float: right;
+    background-color: firebrick;
+    color:beige;
+    display: inline-block;
 
+}
+
+.yelp_2 {
+    float:right;
+    width: 50%;
+    padding:10px;
 }
 
 .clear {
     clear:both;
+}
+
+.yelp_input {
+    text-align: center;
 }
