@@ -20,6 +20,7 @@ class App extends React.Component {
 
 				<div className="yelp_input">
 
+
 					<div className="data">
 						<input className="food" onChange={this.updateTerm} className="input" type="text" placeholder="Food" />
 						<input className="location" onChange={this.updateLocation} className="input" type="text" placeholder="location" />
@@ -32,6 +33,7 @@ class App extends React.Component {
 						<div className="yelpResults">
 							<YelpResults results={this.state.businesses} />
 						</div>
+
 
 
 
