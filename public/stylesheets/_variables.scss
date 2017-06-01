@@ -3,3 +3,24 @@ background: #485563;
 background: -webkit-linear-gradient(to right, #29323c, #485563);
 background: linear-gradient(to right, #29323c, #485563);
 }
+
+@mixin main-input-styling() {
+	width: 30%;
+	max-width: 200px;
+	height: 30px;
+	border: 2px solid white;
+	border-radius: 10px;
+	text-align: center;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+@mixin main-button-styling() {
+	width: 15%;
+	max-width: 100px;
+	height: 30px;
+	border: 2px solid white;
+	border-radius: 10px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.2);
+}
