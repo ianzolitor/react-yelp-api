@@ -131,6 +131,7 @@ function Favorites(props) {
 						<img className="yelp_image" src={list.image_url} />
 
 						<div className="yelp_2">
+							<div className="yelp_name2"> Favorites </div>
 							<div className="yelp_name">{list.name}</div>
 							<div className="yelp_location">{list.city}</div>
 						</div>
