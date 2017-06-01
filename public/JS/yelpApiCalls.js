@@ -21,38 +21,23 @@ class App extends React.Component {
 
 			<div className="yelp_input">
 
-<<<<<<< HEAD
-				<div className="data">
-					<input className="food" onChange={this.updateTerm} className="input" type="text" placeholder="Food" />
-					<input className="location" onChange={this.updateLocation} className="input" type="text" placeholder="location" />
-					<button onClick={this.yelpApiCall}>Search</button>
 
-
-					<button onClick={this.myFavorites}>My Favorites</button>
-=======
 					<div className="data">
 						<input className="food" onChange={this.updateTerm} className="input" type="text" placeholder="Food" />
 						<input className="location" onChange={this.updateLocation} className="input" type="text" placeholder="location" />
-						
+
 						<div className="button-container">
 							<button className="button" onClick={this.yelpApiCall}>Search</button>
->>>>>>> f69d367819979cdb3201cd1e6d5c0108500650e4
+
 
 							<button className="button" onClick={this.myFavorites}>My Favorites</button>
-						</div>	
+						</div>
 
-<<<<<<< HEAD
 					<div className="yelpResults">
 						<YelpResults results={this.state.businesses} />
 					</div>
 					<div>
 						<Favorites lists={this.state.favorites}/>
-=======
-						<div className="yelpResults">
-							<YelpResults results={this.state.businesses} />
-						</div>
-
->>>>>>> f69d367819979cdb3201cd1e6d5c0108500650e4
 					</div>
 
 				</div>
