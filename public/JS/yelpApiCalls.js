@@ -38,6 +38,7 @@ class App extends React.Component {
 					</div>
 					<div>
 						<Favorites lists={this.state.favorites}/>
+
 					</div>
 
 				</div>
