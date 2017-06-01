@@ -23,17 +23,16 @@ class App extends React.Component {
 					<div className="data">
 						<input className="food" onChange={this.updateTerm} className="input" type="text" placeholder="Food" />
 						<input className="location" onChange={this.updateLocation} className="input" type="text" placeholder="location" />
-						<button onClick={this.yelpApiCall}>Search</button>
+						
+						<div className="button-container">
+							<button className="button" onClick={this.yelpApiCall}>Search</button>
 
-
-						<button onClick={this.myFavorites}>My Favorites</button>
-
+							<button className="button" onClick={this.myFavorites}>My Favorites</button>
+						</div>	
 
 						<div className="yelpResults">
 							<YelpResults results={this.state.businesses} />
 						</div>
-
-						
 
 					</div>
 

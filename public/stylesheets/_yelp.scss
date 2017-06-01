@@ -1,16 +1,18 @@
+.user-display {
+  text-align: center;
+}
+
 .yelpContainer {
-    // width: 40%;
     border-radius: 10%;
     border: 4px solid salmon;
     height:auto;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-top: 40px;
+    width: 80%;
+    max-width: 400px;
     background-color: black;
-    // display: flex
     max-height: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
     text-align: center;
-
 }
 
 .yelp_image {
@@ -62,9 +64,11 @@
 .yelp_button {
     float: left;
     background-color: firebrick;
-    color:beige;
+    color: beige;
     display: inline-block;
-
+    margin: 0 auto;
+    margin-top: 5px;
+    border-radius: 10px;
 }
 
 .yelp_2 {
@@ -78,5 +82,13 @@
 }
 
 .yelp_input {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
 }
+
