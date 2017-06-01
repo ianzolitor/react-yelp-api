@@ -18,6 +18,8 @@ class App extends React.Component {
 		return(
 			<div>
 
+			<div className="yelp_input">
+
 				<div className="data">
 					<input className="food" onChange={this.updateTerm} className="input" type="text" placeholder="Food" />
 					<input className="location" onChange={this.updateLocation} className="input" type="text" placeholder="location" />
@@ -80,12 +82,15 @@ function YelpResults(props) {
 						<div className="yelpContainer">
 
 								<img className="yelp_image" src={result.image_url} alt="" />
-								<div className="yelp_name">{result.name}</div>
-								<div className="yelp_phone">{result.display_phone}</div>
-								<div className="yelp_address">{result.location.address}</div>
-								<div className="yelp_location">{result.location.city}</div>
-								<img className="yelp_stars" src={result.rating_img_url_small} alt="" />
-								<button className="yelp_button" onClick={addToFavorites}>Add To Favorites</button>
+
+								<div className="yelp_2">
+									<div className="yelp_name">{result.name}</div>
+									<div className="yelp_phone">{result.display_phone}</div>
+									<div className="yelp_address">{result.location.address}</div>
+									<div className="yelp_location">{result.location.city}</div>
+									<img className="yelp_stars" src={result.rating_img_url_small} alt="" />
+									<button className="yelp_button" onClick={addToFavorites}>Add To Favorites</button>
+								</div>
 								<div className="clear"></div>
 
 						</div>
