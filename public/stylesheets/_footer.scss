@@ -1,12 +1,15 @@
 .footer-container {
+	position: fixed;
+	bottom: 0;
 	width: 50vw;
-	margin: 0 auto;
-	background-color: rgba(0,0,0,0.15);
+	left: 25%;
+	background-color: rgba(0,0,0,0.1);
 }
 
 .footer {
 	margin: 0;
-	font-size: 20px;
+	font-size: 18px;
+	color: beige;
 	text-align: center;
 }
 
