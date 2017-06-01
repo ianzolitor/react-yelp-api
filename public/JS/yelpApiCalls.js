@@ -8,22 +8,30 @@ class App extends React.Component {
 			term: "",
 			location: ""
 		}
-		this.updateLocation = this.updateLocation.bind(this)
-		this.updateTerm = this.updateTerm.bind(this)
-		this.yelpApiCall = this.yelpApiCall.bind(this)
+		this.updateLocation = this.updateLocation.bind(this);
+		this.updateTerm = this.updateTerm.bind(this);
+		this.yelpApiCall = this.yelpApiCall.bind(this);
+		this.myFavorites = this.myFavorites.bind(this);
 
 }
 	render() {
 		return(
 			<div>
-				
+
 				<div className="data">
 					<input className="food" onChange={this.updateTerm} className="input" type="text" placeholder="Food" />
 					<input className="location" onChange={this.updateLocation} className="input" type="text" placeholder="location" />
 					<button onClick={this.yelpApiCall}>Search</button>
 
+
+					<button onClick={this.myFavorites}>My Favorites</button>
+
+
 					<div className="yelpResults">
 						<YelpResults results={this.state.businesses} />
+					</div>
+					<div className="favoriteResults">
+						<FavoriteResults />
 					</div>
 
 				</div>
@@ -37,6 +45,16 @@ class App extends React.Component {
 	updateTerm(event) {
 		this.setState({term: event.target.value})
 	}
+	myFavorites(){
+		axios.get("/favorites", {
+
+		}).then(function(response) {
+			console.log(response)
+
+		})
+	}
+
+
 
 	yelpApiCall() {
 

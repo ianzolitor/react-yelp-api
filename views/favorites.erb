@@ -1,0 +1,10 @@
+<h2> <%= @current_user.username %>'s Favorites! </h2>
+
+
+<% myFavorites.each do |favorite| %>
+
+<div class="favorites">
+<%= favorite.name %>
+</div>
+
+<% end %>

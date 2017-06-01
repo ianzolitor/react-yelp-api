@@ -49,3 +49,9 @@ post '/business' do
   redirect '/home'
 
 end
+
+get '/favorites' do
+    @myFavorites = @current_user.businesses
+
+    @myFavorites.to_json
+end

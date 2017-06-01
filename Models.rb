@@ -11,7 +11,7 @@ class Business < ActiveRecord::Base
 	has_many :users, through: :favorites
 end
 
-class Favorites < ActiveRecord::Base
-	belongs_to :users
-	belongs_to :businesses
+class Favorite < ActiveRecord::Base
+	belongs_to :user
+	belongs_to :business
 end
