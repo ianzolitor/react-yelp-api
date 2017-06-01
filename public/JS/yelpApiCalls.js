@@ -64,7 +64,14 @@ function YelpResults(props) {
 							<div>{result.location.address}</div>
 							<div>{result.location.city}</div>
 							<img src={result.rating_img_url_small} alt="" />
-							<button onClick="myFunction()">Favorite</button>
+							<div>
+								<form class="add-business-form" action="/business" method="post">
+								<input type="hidden" name="name" value= {result.name} />
+								<input type="hidden" name="city" value= {result.location.city} />
+								<input type="hidden" name="image_url" value= {result.image_url} />
+								<input type="submit" value="Add To Favorites" />
+								</form>
+							</div>
 						</div>
 
 					 </div>
