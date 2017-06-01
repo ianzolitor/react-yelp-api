@@ -16,14 +16,16 @@ class App extends React.Component {
 	render() {
 		return(
 			<div>
-				<div className="yelpResults">
-					<YelpResults results={this.state.businesses} />
-				</div>
-
+				
 				<div className="data">
 					<input className="food" onChange={this.updateTerm} className="input" type="text" placeholder="Food" />
 					<input className="location" onChange={this.updateLocation} className="input" type="text" placeholder="location" />
 					<button onClick={this.yelpApiCall}>Search</button>
+
+					<div className="yelpResults">
+						<YelpResults results={this.state.businesses} />
+					</div>
+
 				</div>
 			</div>
 		)
