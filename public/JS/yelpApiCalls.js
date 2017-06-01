@@ -33,8 +33,6 @@ class App extends React.Component {
 							<YelpResults results={this.state.businesses} />
 						</div>
 
-						
-
 					</div>
 
 				</div>
