@@ -38,3 +38,12 @@ post '/signin' do
         redirect '/'
       end
 end
+
+
+post '/business' do
+
+  Business.create(name: params[:name],image_url: params[:image_url], city: params[:city])
+
+  redirect '/home'
+
+end
