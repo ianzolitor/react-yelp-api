@@ -1,0 +1,10 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	@include main-bg-color();
+	color: white;
+	font-family: "Futura";
+}
