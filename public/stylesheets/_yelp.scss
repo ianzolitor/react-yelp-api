@@ -1,0 +1,49 @@
+.yelpContainer {
+    width: 40%;
+    border-radius: 10%;
+    border: 4px solid salmon;
+    height:auto;
+    margin: 20px;
+    background-color: teal;
+    // display: flex;
+}
+
+.yelp_image {
+    background-size: 100% 100%;
+    float: left;
+}
+
+.yelp_name {
+    color: white;
+    float: right;
+
+}
+
+.yelp_phone{
+    color: salmon;
+    float: right;
+}
+
+.yelp_address {
+    color: salmon;
+    float: right;
+}
+
+.yelp_location{
+    color: salmon;
+    float: right;
+}
+
+.yelp_stars {
+    color: salmon;
+    float: right;
+}
+
+.yelp_button {
+    float: right;
+
+}
+
+.clear {
+    clear:both;
+}

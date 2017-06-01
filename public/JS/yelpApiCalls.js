@@ -58,13 +58,14 @@ function YelpResults(props) {
 			return(	 <div key={index}>
 
 						<div className="yelpContainer">
-							<img src={result.image_url} alt="" />
-							<div>{result.name}</div>
-							<div>{result.display_phone}</div>
-							<div>{result.location.address}</div>
-							<div>{result.location.city}</div>
-							<img src={result.rating_img_url_small} alt="" />
-							<button onClick="myFunction()">Favorite</button>
+								<img className="yelp_image" src={result.image_url} alt="" />
+								<div className="yelp_name">{result.name}</div>
+								<div className="yelp_phone">{result.display_phone}</div>
+								<div className="yelp_address">{result.location.address}</div>
+								<div className="yelp_location">{result.location.city}</div>
+								<img className="yelp_stars" src={result.rating_img_url_small} alt="" />
+								<button className="yelp_button" onClick="myFunction()">Favorite</button>
+								<div className="clear"></div>
 						</div>
 
 					 </div>
