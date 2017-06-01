@@ -127,7 +127,7 @@ function Favorites(props) {
 	let favorites=props.lists.map(function(list, index){
 		return( <div key={index}>
 
-					<div className="yelpContainer">
+					<div className="yelpContainer2">
 						<img className="yelp_image" src={list.image_url} />
 
 						<div className="yelp_2">
