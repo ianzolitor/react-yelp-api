@@ -18,22 +18,23 @@ class App extends React.Component {
 		return(
 			<div>
 
-			<div className="yelp_input">
+				<div className="yelp_input">
 
-				<div className="data">
-					<input className="food" onChange={this.updateTerm} className="input" type="text" placeholder="Food" />
-					<input className="location" onChange={this.updateLocation} className="input" type="text" placeholder="location" />
-					<button onClick={this.yelpApiCall}>Search</button>
-
-
-					<button onClick={this.myFavorites}>My Favorites</button>
+					<div className="data">
+						<input className="food" onChange={this.updateTerm} className="input" type="text" placeholder="Food" />
+						<input className="location" onChange={this.updateLocation} className="input" type="text" placeholder="location" />
+						<button onClick={this.yelpApiCall}>Search</button>
 
 
-					<div className="yelpResults">
-						<YelpResults results={this.state.businesses} />
-					</div>
-					<div className="favoriteResults">
-						<FavoriteResults />
+						<button onClick={this.myFavorites}>My Favorites</button>
+
+
+						<div className="yelpResults">
+							<YelpResults results={this.state.businesses} />
+						</div>
+
+						
+
 					</div>
 
 				</div>
