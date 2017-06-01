@@ -56,8 +56,17 @@ function YelpResults(props) {
 
 		let businesses = props.results.map(function(result, index){
 			return(	 <div key={index}>
-						 <div>{result.name}</div>
-						 <img src={result.image_url} alt="" />
+
+						<div className="yelpContainer">
+							<img src={result.image_url} alt="" />
+							<div>{result.name}</div>
+							<div>{result.display_phone}</div>
+							<div>{result.location.address}</div>
+							<div>{result.location.city}</div>
+							<img src={result.rating_img_url_small} alt="" />
+							<button onClick="myFunction()">Favorite</button>
+						</div>
+
 					 </div>
 				)
 		})
