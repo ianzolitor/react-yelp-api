@@ -2,9 +2,9 @@ function Header() {
 	return(
 			<div className="header-container">
 				<header>
-					<h1 className="header">The Shopping Mall</h1>
+					<h1 className="header">La Guerilla Yelp Brigada </h1>
 				</header>
-			</div>
+			</div>	
 		)
 }
 
