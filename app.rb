@@ -39,6 +39,9 @@ post '/signin' do
       end
 end
 
+post '/logout' do
+  session[:user_id] = nil
+end
 
 post '/business' do
 
