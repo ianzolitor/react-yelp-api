@@ -64,18 +64,29 @@ function YelpResults(props) {
 							<div>{result.location.address}</div>
 							<div>{result.location.city}</div>
 							<img src={result.rating_img_url_small} alt="" />
-							<div>
-								<form class="add-business-form" action="/business" method="post">
-								<input type="hidden" name="name" value= {result.name} />
-								<input type="hidden" name="city" value= {result.location.city} />
-								<input type="hidden" name="image_url" value= {result.image_url} />
-								<input type="submit" value="Add To Favorites" />
-								</form>
-							</div>
+							<button className="yelp_button" onClick={addToFavorites}>Add To Favorites</button>
+
 						</div>
 
 					 </div>
 				)
+
+				function addToFavorites(){
+
+					axios({
+					  method: 'post',
+					  url: '/business',
+					  params: {
+							name: result.name,
+							city: result.location.city,
+							image_url: result.image_url
+					  }
+
+					}).then(function(response) {
+
+
+					})
+				}
 		})
 
 	return(
