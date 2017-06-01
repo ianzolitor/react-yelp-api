@@ -6,8 +6,7 @@ class App extends React.Component {
 		this.state = {
 			businesses: [],
 			term: "",
-			location: "",
-			favorites: []
+			location: ""
 		}
 		this.updateLocation = this.updateLocation.bind(this);
 		this.updateTerm = this.updateTerm.bind(this);
@@ -19,46 +18,25 @@ class App extends React.Component {
 		return(
 			<div>
 
-			<div className="yelp_input">
+				<div className="yelp_input">
 
-<<<<<<< HEAD
-				<div className="data">
-					<input className="food" onChange={this.updateTerm} className="input" type="text" placeholder="Food" />
-					<input className="location" onChange={this.updateLocation} className="input" type="text" placeholder="location" />
-					<button onClick={this.yelpApiCall}>Search</button>
-
-
-					<button onClick={this.myFavorites}>My Favorites</button>
-=======
 					<div className="data">
 						<input className="food" onChange={this.updateTerm} className="input" type="text" placeholder="Food" />
 						<input className="location" onChange={this.updateLocation} className="input" type="text" placeholder="location" />
-						
-						<div className="button-container">
-							<button className="button" onClick={this.yelpApiCall}>Search</button>
->>>>>>> f69d367819979cdb3201cd1e6d5c0108500650e4
+						<button onClick={this.yelpApiCall}>Search</button>
 
-							<button className="button" onClick={this.myFavorites}>My Favorites</button>
-						</div>	
 
-<<<<<<< HEAD
-					<div className="yelpResults">
-						<YelpResults results={this.state.businesses} />
-					</div>
-					<div>
-						<Favorites lists={this.state.favorites}/>
-=======
+						<button onClick={this.myFavorites}>My Favorites</button>
+
+
 						<div className="yelpResults">
 							<YelpResults results={this.state.businesses} />
 						</div>
 
-<<<<<<< HEAD
-=======
->>>>>>> f69d367819979cdb3201cd1e6d5c0108500650e4
->>>>>>> eed9a010ac2114f3493dcb62bb8432a2531a6fc1
+
+
 					</div>
 
-				</div>
 				</div>
 			</div>
 		)
@@ -74,9 +52,14 @@ class App extends React.Component {
 		axios.get("/favorites", {
 
 		}).then(function(response) {
-			this.setState({favorites: response.data})
-		}.bind(this))
+			// console.log(response)
+
+
+
+		})
 	}
+
+
 
 	yelpApiCall() {
 
@@ -131,6 +114,7 @@ function YelpResults(props) {
 
 					}).then(function(response) {
 
+
 					})
 				}
 		})
@@ -140,25 +124,6 @@ function YelpResults(props) {
 	)
 }
 
-function Favorites(props) {
-	console.log(props);
-	let favorites=props.lists.map(function(list, index){
-		return( <div key={index}>
-
-					<div className="yelpContainer">
-						<img className="yelp_image" src={list.image_url} />
-
-						<div className="yelp_2">
-							<div className="yelp_name">{list.name}</div>
-							<div className="yelp_location">{list.city}</div>
-						</div>
-						<div className="clear"></div>
-					</div>
-				</div>
-					)
-			})
-			return <div>{favorites}</div>
-}
 
 ReactDOM.render(
 	<App />,
