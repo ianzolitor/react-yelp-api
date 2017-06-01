@@ -6,7 +6,8 @@ class App extends React.Component {
 		this.state = {
 			businesses: [],
 			term: "",
-			location: ""
+			location: "",
+			favorites: []
 		}
 		this.updateLocation = this.updateLocation.bind(this);
 		this.updateTerm = this.updateTerm.bind(this);
@@ -18,25 +19,25 @@ class App extends React.Component {
 		return(
 			<div>
 
-				<div className="yelp_input">
+			<div className="yelp_input">
 
-					<div className="data">
-						<input className="food" onChange={this.updateTerm} className="input" type="text" placeholder="Food" />
-						<input className="location" onChange={this.updateLocation} className="input" type="text" placeholder="location" />
-						<button onClick={this.yelpApiCall}>Search</button>
-
-
-						<button onClick={this.myFavorites}>My Favorites</button>
+				<div className="data">
+					<input className="food" onChange={this.updateTerm} className="input" type="text" placeholder="Food" />
+					<input className="location" onChange={this.updateLocation} className="input" type="text" placeholder="location" />
+					<button onClick={this.yelpApiCall}>Search</button>
 
 
-						<div className="yelpResults">
-							<YelpResults results={this.state.businesses} />
-						</div>
+					<button onClick={this.myFavorites}>My Favorites</button>
 
-						
 
+					<div className="yelpResults">
+						<YelpResults results={this.state.businesses} />
+					</div>
+					<div>
+						<Favorites lists={this.state.favorites}/>
 					</div>
 
+				</div>
 				</div>
 			</div>
 		)
@@ -52,12 +53,9 @@ class App extends React.Component {
 		axios.get("/favorites", {
 
 		}).then(function(response) {
-			console.log(response)
-
-		})
+			this.setState({favorites: response.data})
+		}.bind(this))
 	}
-
-
 
 	yelpApiCall() {
 
@@ -112,7 +110,6 @@ function YelpResults(props) {
 
 					}).then(function(response) {
 
-
 					})
 				}
 		})
@@ -122,6 +119,25 @@ function YelpResults(props) {
 	)
 }
 
+function Favorites(props) {
+	console.log(props);
+	let favorites=props.lists.map(function(list, index){
+		return( <div key={index}>
+
+					<div className="yelpContainer">
+						<img className="yelp_image" src={list.image_url} />
+
+						<div className="yelp_2">
+							<div className="yelp_name">{list.name}</div>
+							<div className="yelp_location">{list.city}</div>
+						</div>
+						<div className="clear"></div>
+					</div>
+				</div>
+					)
+			})
+			return <div>{favorites}</div>
+}
 
 ReactDOM.render(
 	<App />,
