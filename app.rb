@@ -38,3 +38,14 @@ post '/signin' do
         redirect '/'
       end
 end
+
+
+post '/business' do
+
+  Business.create(name: params[:name],image_url: params[:image_url], city: params[:city])
+
+  Favorites.create(user_id: @current_user.id, business_id: Business.last.id )
+
+  redirect '/home'
+
+end

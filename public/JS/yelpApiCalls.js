@@ -58,6 +58,7 @@ function YelpResults(props) {
 			return(	 <div key={index}>
 
 						<div className="yelpContainer">
+
 								<img className="yelp_image" src={result.image_url} alt="" />
 								<div className="yelp_name">{result.name}</div>
 								<div className="yelp_phone">{result.display_phone}</div>
@@ -66,10 +67,36 @@ function YelpResults(props) {
 								<img className="yelp_stars" src={result.rating_img_url_small} alt="" />
 								<button className="yelp_button" onClick="myFunction()">Favorite</button>
 								<div className="clear"></div>
+
+							<img src={result.image_url} alt="" />
+							<div>{result.name}</div>
+							<div>{result.display_phone}</div>
+							<div>{result.location.address}</div>
+							<div>{result.location.city}</div>
+							<img src={result.rating_img_url_small} alt="" />
+							<button className="yelp_button" onClick={addToFavorites}>Add To Favorites</button>
+
 						</div>
 
 					 </div>
 				)
+
+				function addToFavorites(){
+
+					axios({
+					  method: 'post',
+					  url: '/business',
+					  params: {
+							name: result.name,
+							city: result.location.city,
+							image_url: result.image_url
+					  }
+
+					}).then(function(response) {
+
+
+					})
+				}
 		})
 
 	return(
